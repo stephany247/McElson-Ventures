@@ -1,5 +1,5 @@
 :root {
-    --yellow: #F2C94C;
+    --yellow: #f0ad4e;
     --blue: #0F57FB;
     --text: #484C50;
     --white: #FFFFFF;
@@ -12,11 +12,12 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
     font-style: normal;
-    line-height: 1.6;
-    height: fit-content;
+    height: auto;
     width: 100%;
+    overflow-x: hidden;
     background-color: var(--line);
     color: var(--black);
+    justify-content: center;
 }
 
 h1,
@@ -26,8 +27,8 @@ h2 {
 }
 
 h1 {
-    font-size: 2.7rem;
-    line-height: 4rem;
+    font-size: 3vw;
+    line-height: 1.4em;
 }
 
 p {
@@ -62,15 +63,16 @@ button.btn1:hover {
 }
 
 .navbar-brand {
-    margin-left: 4rem;
+    margin-left: 2rem;
 }
 
 .navbar-brand.text-light {
     font-weight: 800;
+    text-wrap: wrap;
 }
 
 .navbar-nav {
-    margin-right: 4rem;
+    margin-right: 2rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -99,39 +101,45 @@ button.btn1:hover {
 }
 
 .image-box {
-    padding: 0.3rem 1rem;
+    padding: auto;
 }
 
 .image-box-title {
     color: var(--white);
-    /* padding: 0.3rem 1rem; */
 }
 
 .image-box-description {
     color: var(--line);
 }
 
+#top-container .row img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
 #top-container button.btn1 {
     background-color: var(--white);
     color: var(--blue);
-    margin: 2rem 1rem auto;
+    margin: 2rem auto;
 }
 
 #about-section {
     position: relative;
-    margin: 1rem;
+    margin: 0;
 }
 
 #about-section .col {
     margin: 0;
-    padding: 0 4rem;
+    padding: 0 3rem;
 }
 
 #about-section img {
-    width: 32rem;
-    height: 33rem;
-    border-radius: 18px;
-    /* padding-left: 3rem; */
+    width: 90%;
+    /* max-width: 32rem; */
+    height: auto;
+    border-radius: 8px;
+    margin-left: 2rem;
 }
 
 #about-section .col h4 {
@@ -150,7 +158,6 @@ button.btn1:hover {
 }
 
 #services-section {
-    position: relative;
     margin: 6rem 2rem;
 }
 
@@ -165,7 +172,7 @@ button.btn1:hover {
 }
 
 #services-section .col h3 {
-    margin: 1rem auto 1.3rem;
+    margin: 1.3rem auto 1.3rem;
     font-weight: 600;
 }
 
@@ -182,16 +189,18 @@ button.btn1:hover {
     margin: 3rem auto;
 }
 
-#cta-section .row {
+#cta-section {
     background-color: var(--blue);
     color: var(--white);
-    margin: 2rem 0 auto 4rem;
-    padding: 0;
-    width: 100%;
 }
 
-#cta-section .image-box-title  {
-    padding: 6rem 3rem 0;
+#cta-section .row {
+    margin: 2rem 0 auto 4rem;
+    padding: 0;
+}
+
+#cta-section .image-box-title {
+    padding: 5rem 3rem 0;
 }
 
 #cta-section .image-box-description {
@@ -206,13 +215,384 @@ button.btn1:hover {
 }
 
 #cta-section img {
-    width: 225px;
-    height: 225px;
+    width: 100%;
+    max-width: 14rem;
+    height: 14rem;
     padding: 0;
     margin: 0;
 }
 
 table {
-  background-color: #fff;
+    background-color: #fff;
+    margin: auto;
 }
 
+#testimonials {
+    margin: 7rem 2rem 2rem;
+    text-align: center;
+}
+
+#testimonials h2 {
+    text-transform: capitalize;
+}
+
+#testimonials span {
+    font-weight: normal;
+}
+
+#testimonials .row {
+    padding: 1rem 0;
+}
+
+#testimonials .col {
+    padding: 2rem;
+}
+
+#testimonials .col i:first-child {
+    font-size: 2rem;
+    color: var(--blue);
+    padding: 1rem;
+}
+
+#testimonials .col i {
+    font-size: 1rem;
+    color: var(--yellow);
+    padding: 2rem 0;
+}
+
+#work-section {
+    margin: 4rem 2rem 3rem;
+}
+
+#work-section h2 {
+    margin: 1rem auto 3rem;
+    text-align: center;
+}
+
+#work-section img {
+    width: 100%;
+}
+
+#work-section .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin: 2rem;
+}
+
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+footer {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0 2rem;
+}
+
+footer .row {
+    padding: 4rem 1rem 2rem;
+}
+
+footer .row h4 {
+    padding: 0 0 0.5rem;
+}
+
+footer .row i {
+    padding: 0 10px 0 0;
+}
+
+footer .row p {
+    margin: 0;
+    padding: 2px;
+}
+
+footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--white);
+    font-weight: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 1.1rem;
+}
+
+footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+footer .copyright {
+    border-top: 2px solid rgba(256, 256, 256, .3);
+    color: var(--white);
+}
+
+footer .copyright .row {
+    margin: 0;
+    padding: 1rem 1.5rem;
+}
+
+footer .email a {
+    text-decoration: none;
+}
+
+footer .copyright p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--white);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+    body {
+        width: 100%;
+        font-size: medium;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        margin-left: 0;
+        font-size: medium;
+    }
+
+    .row .image {
+        margin: 0;
+        box-shadow: 0 20px 300px rgba(0, 0, 0, 0.18);
+    }
+
+    #about-section img {
+        display: none;
+    }
+
+    #about-section .col {
+        padding: 0 2rem;
+    }
+
+    #services-section {
+        margin: 6rem 2rem;
+    }
+
+    #services-section .row {
+        padding: 1rem 0;
+    }
+
+    #services-section .col {
+        padding: 1rem 2rem;
+    }
+
+    #services-section button.btn1 {
+        margin: 1rem auto 0;
+    }
+
+    #cta-section .row {
+        margin: 0;
+        padding: 2rem 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #cta-section .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    #cta-section button.btn1 {
+        margin: 2rem 3rem 2rem;
+    }
+
+    #testimonials .row {
+        padding: 0;
+    }
+
+    #testimonials .col {
+        padding: 1rem;
+    }
+
+    #testimonials .col i {
+        padding: 1rem 0;
+    }
+
+    #work-section {
+        margin: 4rem 0.5rem 3rem;
+    }
+
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    footer .btn.btn-link {
+        text-align: center;
+    }
+
+    footer .btn.btn-link::before {
+        display: none;
+    }
+
+    footer .copyright {
+        font-size: 10px;
+    }
+
+    footer .copyright .row {
+        padding: 8px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    /* @media only screen and (min-width: 600px) { */
+    #cta-section .row {
+        margin: 0;
+        padding: 2rem 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #cta-section .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    #cta-section button.btn1 {
+        margin: 2rem 3rem 2rem;
+    }
+
+    footer .col {
+        padding: 2rem 0.7rem 0;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+
+    #cta-section {
+        margin-left: 4rem;
+    }
+
+    #cta-section .row {
+        margin: 0;
+        padding: 0;
+        background-color: var(--blue);
+        color: var(--white);  
+    }
+    
+
+    #cta-section .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    #cta-section .image-box-title {
+        padding: auto;
+    }
+
+    #cta-section .image-box-description {
+        padding: auto;
+    }
+
+    #cta-section button.btn1 {
+        margin: 1rem 2.5rem 1rem;
+    }
+
+    footer .col {
+        padding: 2rem 0.7rem 0;
+    }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)  {
+
+    #cta-section {
+        margin-left: 8rem;
+    }
+
+    #cta-section .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    #cta-section .image-box-title {
+        padding: auto;
+    }
+
+    #cta-section .image-box-description {
+        padding: auto;
+    }
+
+    #cta-section button.btn1 {
+        margin: 1rem 3rem 1rem;
+    }
+
+    #about-section img {
+        width: 100%;
+        max-width: 42rem;
+        height: auto;
+        min-height: 32rem;
+        border-radius: 8px;
+        /* margin-left: 2rem; */
+    }
+
+    .image-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #cta-section {
+        margin-left: 8rem;
+    }
+}
