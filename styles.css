@@ -47,6 +47,7 @@ button.btn1 {
     transition: .5s;
     background-color: var(--white);
     color: var(--blue);
+    text-transform: capitalize;
 }
 
 button.btn1:hover {
@@ -62,6 +63,7 @@ button.btn2 {
     border-radius: 4px;
     margin: 2rem auto;
     transition: .5s;
+    text-transform: capitalize;
 }
 
 button.btn2:hover {
@@ -231,10 +233,9 @@ button.btn2:hover {
 }
 
 
-#cta-section button.btn1 {
+#cta-section button.btn2 {
     background-color: var(--white);
     color: var(--blue);
-    margin: 2rem 3rem auto;
 }
 
 #cta-section img {
@@ -460,8 +461,16 @@ footer a {
         margin: 0;
     }
 
-    #cta-section button.btn1 {
-        margin: 2rem 3rem 2rem;
+    #cta-section .image-box-title {
+        padding: 3rem 0 0;
+    }
+    
+    #cta-section .image-box-description {
+        padding:s 0;
+    }
+
+    #cta-section button.btn2 {
+        margin: 1rem 0 2rem;
     }
 
     #testimonials .row {
@@ -552,8 +561,12 @@ footer a {
         margin: 0;
     }
 
-    #cta-section button.btn1 {
-        margin: 2rem 3rem 2rem;
+    #cta-section .image-box-title {
+        padding: 3rem 0 0;
+    }
+
+    #cta-section button.btn2 {
+        margin: 1rem 0 2rem;
     }
 
     #testimonials .col i {
@@ -601,10 +614,6 @@ footer a {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 
-    #cta-section {
-        /* margin-left: 4rem; */
-    }
-
     #cta-section .row {
         margin: 0;
         padding: 0;
@@ -619,15 +628,15 @@ footer a {
     }
 
     #cta-section .image-box-title {
-        padding: auto;
+        padding:  3rem 0 0;
     }
 
     #cta-section .image-box-description {
         padding: auto;
     }
 
-    #cta-section button.btn1 {
-        margin: 1rem 2.5rem 1rem;
+    #cta-section button.btn2 {
+        margin: 1rem 0 1rem;
     }
 
     #services-section .col {
@@ -693,7 +702,7 @@ footer a {
     }
 
     #cta-section button.btn1 {
-        margin: 1rem 3rem 1rem;
+        margin: 1rem 0 1rem;
     }
 
     #about-section img {
@@ -729,6 +738,10 @@ footer a {
     
     #cta-section .image-box-description {
         padding: 1rem 0 0;
+    }
+
+    #cta-section button.btn2 {
+        margin: 1rem 0 1rem;
     }
 
     #contact-1 .content {
