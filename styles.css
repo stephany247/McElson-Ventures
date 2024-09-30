@@ -3,8 +3,10 @@
     --blue: #0F57FB;
     --text: #484C50;
     --white: #FFFFFF;
+    --bright: #ffffffc2;
     --line: #ffffffA8;
     --black: #313C4D;
+    --lightblue: #f3f7ff;
 }
 
 body {
@@ -43,12 +45,29 @@ button.btn1 {
     border-radius: 4px;
     margin: 2rem auto;
     transition: .5s;
+    background-color: var(--white);
+    color: var(--blue);
 }
 
 button.btn1:hover {
     background-color: var(--white);
     color: var(--blue);
     letter-spacing: 1px;
+}
+
+button.btn2 {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 4px;
+    margin: 2rem auto;
+    transition: .5s;
+}
+
+button.btn2:hover {
+    letter-spacing: 1px;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 #top-container {
@@ -109,19 +128,13 @@ button.btn1:hover {
 }
 
 .image-box-description {
-    color: var(--line);
+    color: var(--bright);
 }
 
 #top-container .row img {
     width: 100%;
     height: auto;
     margin: 0;
-}
-
-#top-container button.btn1 {
-    background-color: var(--white);
-    color: var(--blue);
-    margin: 2rem auto;
 }
 
 #about-section {
@@ -158,16 +171,27 @@ button.btn1:hover {
 }
 
 #services-section {
-    margin: 6rem 2rem;
+    margin: 4rem 1rem;
 }
 
+#services-section .row {
+    padding: 2rem 0;
+}
+
+
 #services-section .col {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+}
+
+#services-section img.img-6{
+    box-shadow: 0 20px 300px rgba(0, 0, 0, 0.18);
+    border: 1px solid var(--black);
 }
 
 #services-section img {
     width: 100%;
     height: auto;
+    max-height: 15rem;
     border-radius: 10px;
 }
 
@@ -177,7 +201,6 @@ button.btn1:hover {
 }
 
 #services-section h2 {
-    margin: 1rem 0;
     font-weight: 800;
     text-align: center;
 }
@@ -186,7 +209,7 @@ button.btn1:hover {
     background-color: var(--blue);
     color: var(--white);
     display: block;
-    margin: 3rem auto;
+    margin: 1rem auto;
 }
 
 #cta-section {
@@ -245,7 +268,7 @@ table {
 }
 
 #testimonials .col {
-    padding: 2rem;
+    padding: 2rem 2rem 0;
 }
 
 #testimonials .col i:first-child {
@@ -257,7 +280,7 @@ table {
 #testimonials .col i {
     font-size: 1rem;
     color: var(--yellow);
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 #work-section {
@@ -366,6 +389,14 @@ footer .copyright p {
 footer a {
     color: var(--white);
 }
+.content-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 100%; /* Ensures the width takes full column width */
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 576px) {
@@ -405,7 +436,12 @@ footer a {
     }
 
     #services-section .col {
-        padding: 1rem 2rem;
+        padding: 1rem 0;
+    }
+
+    #services-section h2.service-heading {
+        text-align: center;
+        padding: 0;
     }
 
     #services-section button.btn1 {
@@ -475,12 +511,35 @@ footer a {
         padding: 8px;
     }
 
+    #contact-1 {
+        margin-bottom: 3rem;
+    }
+
+    #contact-1 .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #contact-1 .content {
+        padding: 2rem;
+        margin: auto;
+    }
+
+    #benefits {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
-    /* @media only screen and (min-width: 600px) { */
+    #services-section .col {
+        padding: 1rem 0;
+    }
+
     #cta-section .row {
         margin: 0;
         padding: 2rem 0 0;
@@ -497,26 +556,62 @@ footer a {
         margin: 2rem 3rem 2rem;
     }
 
+    #testimonials .col i {
+        padding: 10px 0;
+    }
+
     footer .col {
         padding: 2rem 0.7rem 0;
+    }
+
+    #contact-1 {
+        margin-bottom: 5rem;
+    }
+
+    #contact-1 .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #contact-1 .content {
+        padding: 2rem;
+        margin: auto;
+    }
+
+    #benefits {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+    }
+
+    #about img {
+        max-height: 20rem;
+    }
+
+    #about .content {
+        padding: auto;
+    }
+
+    #about .content {
+        padding: 2rem;
     }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1199px){
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
 
     #cta-section {
-        margin-left: 4rem;
+        /* margin-left: 4rem; */
     }
 
     #cta-section .row {
         margin: 0;
         padding: 0;
         background-color: var(--blue);
-        color: var(--white);  
+        color: var(--white);
     }
-    
+
 
     #cta-section .container-fluid {
         padding: 0;
@@ -535,9 +630,35 @@ footer a {
         margin: 1rem 2.5rem 1rem;
     }
 
+    #services-section .col {
+        padding: 0 1rem;
+    }
+
+    #testimonials .col i {
+        padding: 10px 0;
+    }
+
     footer .col {
         padding: 2rem 0.7rem 0;
     }
+
+    #contact-1 .content {
+        padding: 5rem 2rem 0;
+        margin: auto;
+    }
+
+    #contact-2 img {
+        min-height: 30rem;
+    }
+
+    #about img {
+        min-height: 35rem;
+    }
+
+    #benefits img {
+        min-height: 30rem;
+    }
+
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -547,11 +668,12 @@ footer a {
         flex: 50%;
         max-width: 50%;
     }
+
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px)  {
+@media only screen and (min-width: 992px) {
 
     #cta-section {
         margin-left: 8rem;
@@ -588,6 +710,11 @@ footer a {
         justify-content: center;
         align-items: center;
     }
+
+    #contact-1 .content {
+        padding: 5rem 2rem 0;
+        margin: auto;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -595,4 +722,204 @@ footer a {
     #cta-section {
         margin-left: 8rem;
     }
+
+    #cta-section .image-box-title {
+        padding: 5rem 0 0;
+    }
+    
+    #cta-section .image-box-description {
+        padding: 1rem 0 0;
+    }
+
+    #contact-1 .content {
+        padding: 7rem 2rem;
+        margin: auto;
+    }
+
+    #about img {
+        max-height: 30rem;
+    }
+
+
+    #services-section h2.service-heading {
+        text-align: left;
+        padding: 0 2rem;
+    }
+
+    #about .content {
+        padding: 4rem 2rem 0;
+
+    }
+}
+
+
+/* ABOUT PAGE */
+
+#top-container .row-1 {
+    padding: 5rem 1rem 3rem;
+}
+
+#top-container .row-1 .image-box-title {
+    padding-bottom: 1rem;
+}
+
+#about .column-2 {
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+#about .content {
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#about h2 {
+    padding: 1rem 0;
+}
+
+#about i {
+    padding: 0 1rem 0 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+#about .row-1 {
+    padding: 0;
+    margin: 6rem 0 4rem;
+}
+
+#about .col {
+    padding: 0;
+}
+
+#about img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 20px 300px rgba(0, 0, 0, 0.1);
+}
+
+.check-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.check-item i {
+    padding-top: 10px;
+}
+
+#benefits {
+    background-color: var(--blue);
+    margin-bottom: 4rem;
+}
+
+#benefits .row {
+    padding: 0;
+    align-items: center;
+}
+
+#benefits .col {
+    padding: 0;
+}
+
+#benefits h2 {
+    padding: 1rem 0;
+}
+
+#benefits i {
+    color: var(--white);
+    padding: 0 1rem 0 0;
+    font-size: 1rem;
+}
+
+#benefits img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* CONTACT PAGE */
+
+
+#contact-1 {
+    margin-top: 2rem;
+}
+
+#contact-1 .column-2 {
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+
+
+#contact-1 h2 {
+    padding: 1rem 0;
+}
+
+#contact-1 i {
+    padding: 0 1rem 0 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+#contact-1 .col {
+    padding: 0;
+}
+
+#contact-1 form {
+    background-color: var(--lightblue);
+    padding: 2rem;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+#contact-1 form .row {
+    padding: 0;
+}
+
+
+#contact-2 {
+    margin: 0;
+    margin-bottom: 6rem;
+}
+
+#contact-2 .row {
+    padding: 0;
+    background-color: var(--lightblue);
+}
+
+#contact-2 .col {
+    padding: 0;
+}
+
+#contact-2 button.btn2 {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#contact-2 i {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#contact-2 img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+#contact-2 .column-2 {
+    background-color: var(--lightblue);
+    align-items: center;
+}
+
+#contact-2 .content {
+    margin: auto;
+    width: 90%;
+    padding: 5rem 0;
 }
