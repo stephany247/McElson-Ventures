@@ -229,7 +229,7 @@ button.btn2:hover {
 }
 
 #cta-section .image-box-description {
-    padding: 1rem 3rem 0;
+    margin: 1rem 0;
 }
 
 
@@ -247,7 +247,7 @@ button.btn2:hover {
 }
 
 table {
-    background-color: #fff;
+    /* background-color: #fff; */
     margin: auto;
 }
 
@@ -390,14 +390,10 @@ footer .copyright p {
 footer a {
     color: var(--white);
 }
-.content-box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border: 1px solid #ddd;
-    text-align: center;
-    width: 100%; /* Ensures the width takes full column width */
-}
 
+footer .address {
+    padding-top: 1rem;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 576px) {
@@ -466,7 +462,8 @@ footer a {
     }
     
     #cta-section .image-box-description {
-        padding:s 0;
+        padding: 0;
+        margin: 1rem 0;
     }
 
     #cta-section button.btn2 {
@@ -643,6 +640,11 @@ footer a {
         padding: 0 1rem;
     }
 
+    #services-section img {
+        height: 45vh;
+    }
+
+
     #testimonials .col i {
         padding: 10px 0;
     }
@@ -683,10 +685,6 @@ footer a {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
-    #cta-section {
-        margin-left: 8rem;
-    }
 
     #cta-section .container-fluid {
         padding: 0;
@@ -737,7 +735,7 @@ footer a {
     }
     
     #cta-section .image-box-description {
-        padding: 1rem 0 0;
+        margin: 1rem 0 0;
     }
 
     #cta-section button.btn2 {
@@ -888,6 +886,8 @@ footer a {
     padding: 2rem;
     text-transform: capitalize;
     font-weight: 300;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.18);
+    
 }
 
 #contact-1 form .row {
@@ -929,6 +929,8 @@ footer a {
 #contact-2 .column-2 {
     background-color: var(--lightblue);
     align-items: center;
+    /* box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.18); */
+    box-shadow: 0 2px 100px rgba(0, 0, 0, 0.18);
 }
 
 #contact-2 .content {
